@@ -108,17 +108,12 @@ WSGI_APPLICATION = 'credit_card.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',  # Using djongo as the database engine
-        'NAME': env('DB_NAME'),  # Database name from .env
-        'ENFORCE_SCHEMA': True,  # Ensures data validation on schema changes
-        'CLIENT': {
-            'host': env('DB_HOST', default='localhost'),  # MongoDB host (default: localhost)
-            'port': env('DB_PORT', default=27017),  # MongoDB port (default: 27017)
-            'username': env('DB_USER', default=None),  # Username for authentication
-            'password': env('DB_PASSWORD', default=None),  # Password for authentication
-            'authSource': env('DB_AUTH_SOURCE', default='admin'),  # Auth source database (default: admin)
-            'authMechanism': 'SCRAM-SHA-1',  # Authentication mechanism (recommended for newer MongoDB versions)
-        }
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django_learn',
+        'USER':'root',
+        'PASSWORD':'S@gar7870',
+        'HOST':'localhost',
+        'PORT':'3306',
     }
 }
 
