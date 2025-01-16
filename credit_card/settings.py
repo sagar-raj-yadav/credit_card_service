@@ -108,12 +108,17 @@ WSGI_APPLICATION = 'credit_card.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'credit_service_db',
-        'USER':'root',
-        'PASSWORD':'S@gar7870',
-        'HOST':'localhost',
-        'PORT':'3306',
+        'ENGINE': 'djongo',
+        'NAME': env('DB_NAME'),
+        'ENFORCE_SCHEMA': True, 
+        'CLIENT': {
+            'host': env('DB_HOST', default='localhost'), 
+            'port': env('DB_PORT', default=27017),  
+            'username': env('DB_USER', default=None), 
+            'password': env('DB_PASSWORD', default=None), 
+            'authSource': env('DB_AUTH_SOURCE', default='admin'), 
+            'authMechanism': 'SCRAM-SHA-1',  # Authentication mechanism
+        }
     }
 }
 # Static and Media files
