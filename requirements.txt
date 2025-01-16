@@ -1,3 +1,4 @@
+pip==23.0.1 
 Django==4.2.9
 djangorestframework==3.14.0
 django-cron==0.5.1
