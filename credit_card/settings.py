@@ -41,7 +41,6 @@ SECRET_KEY = env('DJANGO_SECRET_KEY')
 DEBUG = False
 
 
-ALLOWED_HOSTS = [credit_card_service.onrender.com', 'localhost']
 
 
 
@@ -62,7 +61,7 @@ EXTERNAL_APPS=[
 INSTALLED_APPS+=EXTERNAL_APPS
 
 CRON_CLASSES = [
-    "credit_service.cron.BillingCronJob",
+    "credit_card.cron.BillingCronJob",
 ]
 
 CRONJOBS = [
