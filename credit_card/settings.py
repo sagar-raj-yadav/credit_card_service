@@ -108,19 +108,20 @@ WSGI_APPLICATION = 'credit_card.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
-        'NAME': env('DB_NAME'),
-        'ENFORCE_SCHEMA': True, 
+        'ENGINE': 'djongo',  # Using djongo as the database engine
+        'NAME': env('DB_NAME'),  # Database name from .env
+        'ENFORCE_SCHEMA': True,  # Ensures data validation on schema changes
         'CLIENT': {
-            'host': env('DB_HOST', default='localhost'), 
-            'port': env('DB_PORT', default=27017),  
-            'username': env('DB_USER', default=None), 
-            'password': env('DB_PASSWORD', default=None), 
-            'authSource': env('DB_AUTH_SOURCE', default='admin'), 
-            'authMechanism': 'SCRAM-SHA-1',  # Authentication mechanism
+            'host': env('DB_HOST', default='localhost'),  # MongoDB host (default: localhost)
+            'port': env('DB_PORT', default=27017),  # MongoDB port (default: 27017)
+            'username': env('DB_USER', default=None),  # Username for authentication
+            'password': env('DB_PASSWORD', default=None),  # Password for authentication
+            'authSource': env('DB_AUTH_SOURCE', default='admin'),  # Auth source database (default: admin)
+            'authMechanism': 'SCRAM-SHA-1',  # Authentication mechanism (recommended for newer MongoDB versions)
         }
     }
 }
+
 # Static and Media files
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
