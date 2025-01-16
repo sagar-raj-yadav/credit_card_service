@@ -29,6 +29,21 @@ ALLOWED_HOSTS = ['.vercel.app','.now.sh']
 
 
 # Application definition
+import os
+from pathlib import Path
+import environ
+env = environ.Env()
+environ.Env.read_env()
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+SECRET_KEY = env('DJANGO_SECRET_KEY')  
+DEBUG = False
+
+
+ALLOWED_HOSTS = [credit_card_service.onrender.com', 'localhost']
+
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -101,7 +116,18 @@ DATABASES = {
         'PORT':'3306',
     }
 }
+# Static and Media files
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
+# Security settings (set the environment variable on Render)
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_SSL_REDIRECT = True
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -144,6 +170,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-import os
+
 STATICFILES_DIRS=os.path.join(BASE_DIR,'static'),
 STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles_build','static')
