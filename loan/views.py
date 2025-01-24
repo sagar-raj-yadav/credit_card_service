@@ -8,7 +8,7 @@ from django.http import  HttpResponse
 from credit_card.cron import BillingCronJob 
 
 def home_page(request):
-    return HttpResponse("<h1>Hello world .This is Home page</h1>")
+    return HttpResponse("<h1>Hello world .This is Home page of credit card service</h1>")
 
 
 class RegisterUserView(APIView):
