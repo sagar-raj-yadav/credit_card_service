@@ -24,11 +24,11 @@
 - **Body:**  
   ```json
   {
-    "name": "John Doe",
-    "email": "john.doe@example.com",
+    "name": "sagar raj yadav",
+    "email": "sagaryadav@example.com",
     "aadhar_id": "123456789012",
     "phone": "9876543210",
-    "address": "123, Main Street, City"
+    "address": "Bhopal"
   }
   ```
 
