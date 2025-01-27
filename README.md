@@ -5,6 +5,15 @@
 - **Method:**  
   `GET`
 
+
+---
+
+### **5. Trigger Billing Cron**
+- **URL:**  
+  `https://credit-card-service.onrender.com/api/trigger-billing-cron/`
+- **Method:**  
+  `GET`
+  
 ---
 
 ### **2. Register User**
@@ -56,15 +65,8 @@
   }
   ```
 
----
 
-### **5. Trigger Billing Cron**
-- **URL:**  
-  `https://credit-card-service.onrender.com/api/trigger-billing-cron/`
-- **Method:**  
-  `GET`
-- **Body:**  
-  _None_
+
 
 ---
 
