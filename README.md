@@ -1,7 +1,7 @@
 
 ### **1. Home Page**
 - **URL:**  
-  `https://credit-card-service.onrender.com/`
+  https://credit-card-service.onrender.com/
 - **Method:**  
   `GET`
 
@@ -10,7 +10,7 @@
 
 ### **5. Trigger Billing Cron**
 - **URL:**  
-  `https://credit-card-service.onrender.com/api/trigger-billing-cron/`
+  https://credit-card-service.onrender.com/api/trigger-billing-cron/
 - **Method:**  
   `GET`
   
@@ -18,7 +18,7 @@
 
 ### **2. Register User**
 - **URL:**  
-  `https://credit-card-service.onrender.com/api/register-user/`
+  https://credit-card-service.onrender.com/api/register-user/
 - **Method:**  
   `POST`
 - **Body:**  
@@ -36,7 +36,7 @@
 
 ### **3. Apply for a Loan**
 - **URL:**  
-  `https://credit-card-service.onrender.com/api/apply-loan/`
+  https://credit-card-service.onrender.com/api/apply-loan/
 - **Method:**  
   `POST`
 - **Body:**  
@@ -53,7 +53,7 @@
 
 ### **4. Make Payment**
 - **URL:**  
-  `https://credit-card-service.onrender.com/api/make-payment/`
+  https://credit-card-service.onrender.com/api/make-payment/
 - **Method:**  
   `POST`
 - **Body:**  
